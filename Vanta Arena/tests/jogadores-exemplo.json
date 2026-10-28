@@ -1,0 +1,6 @@
+{
+  "players": [
+    {"nick": "EXEMPLO_ALPHA", "name": "Jogador Exemplo A", "steamId64": "76561198000000001", "tier": "A", "role": "AWPer", "bio": "Avaliação de exemplo."},
+    {"nick": "EXEMPLO_BRAVO", "name": "Jogador Exemplo B", "steamId64": "76561198000000002", "tier": "B", "role": "Rifler"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "statistics": [
+    {
+      "playerId": "exemplo-jogador-1",
+      "nick": "EXEMPLO_ALPHA",
+      "source": "Avaliação da organização",
+      "period": "Últimos três meses",
+      "mode": "Premier",
+      "analyzedAt": "2026-10-28",
+      "metrics": { "kd": 1.21, "adr": 78.5, "winrate": 56.2, "games": 42, "premier": 15500, "kast": 71.5, "hs": 48.3, "extras": { "Clutches": 8 } }
+    },
+    {
+      "playerId": "exemplo-jogador-1",
+      "source": "Avaliação da organização",
+      "period": "Geral",
+      "mode": "FACEIT",
+      "analyzedAt": "2026-10-28",
+      "metrics": { "kd": 1.05, "games": 80, "faceit": 6 }
+    }
+  ]
+}
