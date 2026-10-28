@@ -102,6 +102,3 @@ create policy "Editors can read drafts" on public.news_posts for select to authe
 create policy "Editors create articles" on public.news_posts for insert to authenticated with check (public.is_editor());
 create policy "Editors update articles" on public.news_posts for update to authenticated using (public.is_editor()) with check (public.is_editor());
 create policy "Editors delete articles" on public.news_posts for delete to authenticated using (public.is_editor());
-
--- Depois de criar um usuário em Authentication > Users:
--- insert into public.cms_roles (user_id, role) values ('UUID_DO_USUARIO', 'owner');
