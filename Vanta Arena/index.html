@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e14">
+  <meta name="description" content="Jogadores, notícias, tabela de grupos e resultados oficiais do campeonato de Counter-Strike 2.">
+  <title>VANTA ARENA — Campeonato de CS2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand" role="banner">
+        <div class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>VANTA<span class="brand-dot">.</span></strong><small>CS2 CHAMPIONSHIP HUB</small></div>
+      </div>
+      <div class="sidebar-heading">PLATAFORMA</div>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <button class="nav-link active" data-route="players"><span data-icon="users"></span> Início <span class="nav-count" id="navPlayerCount">20</span></button>
+        <button class="nav-link" data-route="news"><span data-icon="history"></span> Jornal da Arena</button>
+        <button class="nav-link" data-route="teams"><span data-icon="shield"></span> Times</button>
+        <button class="nav-link" data-route="standings"><span data-icon="trophy"></span> Tabela de Grupos</button>
+        <button class="nav-link" data-route="ranking"><span data-icon="trophy"></span> Ranking</button>
+        <button class="nav-link" data-route="history"><span data-icon="history"></span> Partidas</button>
+      </nav>
+      <div class="sidebar-heading secondary-heading">CONTROLE</div>
+      <nav class="side-nav"><button class="nav-link" id="adminShortcut"><span data-icon="settings"></span> Área administrativa</button></nav>
+      <div class="sidebar-bottom">
+        <div class="event-chip"><span class="event-orbit"></span><span><small>CAMPEONATO</small><strong>CS2 COMMUNITY CUP</strong></span></div>
+        <div class="offline-note" id="syncStatus"><span class="pulse-mini"></span> Demonstração local</div>
+        <p>O campeonato, de um jeito nosso.</p>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left"><button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu"><span data-icon="menu"></span></button><div class="breadcrumb">TORNEIO <span>/</span> <strong id="breadcrumbText">JOGADORES</strong></div></div>
+        <div class="topbar-right"><span class="season-pill"><span class="live-circle"></span> TEMPORADA 2026</span><button class="icon-button admin-top" id="adminTop" title="Configurações do organizador" aria-label="Área administrativa"><span data-icon="settings"></span></button><div class="admin-avatar" id="adminAvatar" title="Acesso da equipe">ADM</div></div>
+      </header>
+      <main id="mainContent" class="main-content" tabindex="-1"></main>
+      <footer class="site-footer"><span>VANTA ARENA / CAMPEONATO CS2</span><span>JOGADORES · TABELA · PARTIDAS · JORNAL</span><span>© 2026</span></footer>
+    </div>
+  </div>
+  <div id="modalRoot" aria-live="polite"></div>
+  <div id="toastRoot" class="toast-stack" aria-live="polite"></div>
+</body>
+</html>
